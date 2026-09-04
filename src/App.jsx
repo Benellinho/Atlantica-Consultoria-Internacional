@@ -13,7 +13,7 @@ const B = {
 
 /* ── Intersection reveal hook ── */
 function useReveal(threshold = 0.14) {
-  const ref = useRef<HTMLDivElement>(null);
+  const ref = useRef(null);
   const [visible, setVisible] = useState(false);
   useEffect(() => {
     const obs = new IntersectionObserver(
@@ -27,7 +27,7 @@ function useReveal(threshold = 0.14) {
 }
 
 /* ── Animated counter ── */
-function Counter({ target, suffix = "" }: { target: number; suffix?: string }) {
+function Counter({ target, suffix = "" }) {
   const [val, setVal] = useState(0);
   const { ref, visible } = useReveal(0.5);
   useEffect(() => {
@@ -618,14 +618,7 @@ function CeoCard() {
   );
 }
 
-type Person = { name: string; role: string; initials: string; grad: [string, string] };
-
-const DIRETORIAS: {
-  name: string;
-  acento: string;
-  director: Person;
-  staff: Person[];
-}[] = [
+const DIRETORIAS = [
   {
     name: "Jurídico Internacional",
     acento: "#4A90D9",
@@ -668,11 +661,7 @@ const DIRETORIAS: {
   },
 ];
 
-function PersonCard({
-  person, delay, acento, isDirector = false,
-}: {
-  person: Person; delay: number; acento: string; isDirector?: boolean;
-}) {
+function PersonCard({ person, delay, acento, isDirector = false }) {
   const { ref, visible } = useReveal();
   return (
     <div
@@ -707,7 +696,7 @@ function PersonCard({
   );
 }
 
-function DiretoriaBlock({ d, index }: { d: typeof DIRETORIAS[0]; index: number }) {
+function DiretoriaBlock({ d, index }) {
   const { ref, visible } = useReveal();
   return (
     <div
@@ -836,7 +825,7 @@ function Contact() {
   const [form, setForm] = useState({ nome: "", email: "", telefone: "", assunto: "", mensagem: "" });
   const [sent, setSent] = useState(false);
 
-  const set = (k: keyof typeof form) => (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) =>
+  const set = (k) => (e) =>
     setForm(p => ({ ...p, [k]: e.target.value }));
 
   return (

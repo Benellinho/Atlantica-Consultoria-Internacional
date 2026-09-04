@@ -35,9 +35,9 @@ O projeto utiliza o servidor de desenvolvimento configurado pelo ambiente Figma 
 
 ## Organização
 
-- `src/App.tsx` — componente principal e conteúdo da página.
+- `src/App.jsx` — componente principal e conteúdo da página em JSX.
 - `src/index.css` — estilos globais, fontes e tema visual.
-- `src/main.tsx` — ponto de entrada da aplicação.
+- `src/main.jsx` — ponto de entrada da aplicação.
 - `mascote.png` — recurso visual utilizado na apresentação do site.
 - `.figma/make/` — scripts de apoio ao desenvolvimento no Figma Make, como iniciar, formatar, instalar dependências e analisar rotas.
 
