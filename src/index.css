@@ -231,3 +231,10 @@ body {
   overflow: hidden;
   line-height: 0;
 }
+
+
+/* POS-PROTÓTIPO FIGMA */
+
+.imagem-diretoria {
+    object-position: center 20%;
+}

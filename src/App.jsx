@@ -1,16 +1,17 @@
 import { useState, useEffect, useRef } from "react";
+import equipeDiretoria from "./image/Equipe_Diretoria.jpeg";
 import logoBranco from "./image/Logo Branco com Frase.png";
 import magaOficial from "./image/magá SEM FUNDO(3).png";
 import mapaMundi from "./image/mapa mundi com navio.png";
 
 /* ── Brand tokens ── */
 const B = {
-  navy:     "#01113d",
-  navy2:    "#1a3061",
-  orange:   "#fca311",
+  navy: "#01113d",
+  navy2: "#1a3061",
+  orange: "#fca311",
   orangeLt: "#ffbe4f",
-  silver:   "#b1bfcc",
-  mist:     "#dde5f2",
+  silver: "#b1bfcc",
+  mist: "#dde5f2",
   offwhite: "#efefef",
 };
 
@@ -61,11 +62,11 @@ function Nav() {
   }, []);
 
   const links = [
-    { label: "Início",      href: "#hero" },
-    { label: "Serviços",    href: "#servicos" },
-    { label: "Cases",       href: "#cases" },
-    { label: "Quem Somos",  href: "#sobre" },
-    { label: "Contato",     href: "#contato" },
+    { label: "Início", href: "#hero" },
+    { label: "Serviços", href: "#servicos" },
+    { label: "Cases", href: "#cases" },
+    { label: "Quem Somos", href: "#sobre" },
+    { label: "Contato", href: "#contato" },
   ];
 
   return (
@@ -247,25 +248,25 @@ function Hero() {
 ══════════════════════════════ */
 const SERVICES = [
   {
-    icon: <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10A15.3 15.3 0 0 1 12 2z"/><path d="m15 8 3-3m0 0h-3m3 0v3"/></svg>,
+    icon: <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><circle cx="12" cy="12" r="10" /><path d="M2 12h20" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10A15.3 15.3 0 0 1 12 2z" /><path d="m15 8 3-3m0 0h-3m3 0v3" /></svg>,
     title: "Exportação",
     desc: "Preparamos empresas para acessar mercados internacionais com estratégia e segurança. Analisamos oportunidades e conectamos produtos a potenciais compradores no exterior.",
     items: ["Análise de viabilidade", "Estudo de mercado", "Prospecção internacional de compradores"],
   },
   {
-    icon: <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M4 5h7M7.5 3v2c0 4-2 7-5 9"/><path d="M5 10c1.5 2 3 3.5 5 4.5"/><path d="m13 21 4-10 4 10M14.5 17h5"/></svg>,
+    icon: <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M4 5h7M7.5 3v2c0 4-2 7-5 9" /><path d="M5 10c1.5 2 3 3.5 5 4.5" /><path d="m13 21 4-10 4 10M14.5 17h5" /></svg>,
     title: "Tradução",
     desc: "Facilitamos a comunicação entre empresas de diferentes países com traduções claras e profissionais. Oferecemos suporte linguístico para documentos e encontros comerciais.",
     items: ["Serviços de tradução", "Tradução de documentos", "Reuniões de negócios"],
   },
   {
-    icon: <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>,
+    icon: <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" /><polyline points="3.27 6.96 12 12.01 20.73 6.96" /><line x1="12" y1="22.08" x2="12" y2="12" /></svg>,
     title: "Importação",
     desc: "Orientamos operações de importação desde o planejamento até a escolha de fornecedores. Buscamos oportunidades fiscais e reduzimos riscos durante todo o processo.",
     items: ["Busca por benefícios fiscais", "Consultoria em importação", "Prospecção internacional de fornecedores"],
   },
   {
-    icon: <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M16 11c1.5 0 3-1.5 3-3s-1.5-3-3-3-3 1.5-3 3"/><path d="M8 11c-1.5 0-3-1.5-3-3s1.5-3 3-3 3 1.5 3 3"/><path d="m8 12 4 4 4-4"/><path d="M3 21v-2a5 5 0 0 1 5-5M21 21v-2a5 5 0 0 0-5-5"/></svg>,
+    icon: <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M16 11c1.5 0 3-1.5 3-3s-1.5-3-3-3-3 1.5-3 3" /><path d="M8 11c-1.5 0-3-1.5-3-3s1.5-3 3-3 3 1.5 3 3" /><path d="m8 12 4 4 4-4" /><path d="M3 21v-2a5 5 0 0 1 5-5M21 21v-2a5 5 0 0 0-5-5" /></svg>,
     title: "Paradiplomacia",
     desc: "Aproximamos governos locais, instituições e organizações de oportunidades no exterior. Desenvolvemos conexões estratégicas para atrair investimentos e estabelecer parcerias internacionais.",
     items: ["Serviços paradiplomáticos", "Atração de investimentos estrangeiros", "Parcerias internacionais"],
@@ -332,34 +333,82 @@ function Services() {
 ══════════════════════════════ */
 const CASES = [
   {
-    flag: "🇩🇪", country: "Alemanha",
-    client: "Grupo Industrial Paulista", sector: "Manufatura",
-    title: "Aquisição de fábrica na Bavária e estruturação da holding europeia",
-    result: "€ 42M em ativos internacionalizados em 18 meses",
-    tags: ["M&A", "Holding", "Europa"], color: "#4A90D9",
+    flag: "🌎", country: "América Latina",
+    client: "Exatron", sector: "Exportação",
+    title: "Identificação de mercados e compradores potenciais para a expansão da Exatron na América Latina",
+    result: "Mercados prioritários e principais clientes identificados com segurança",
+    tags: ["Análise de Mercado", "Exportação", "Prospecção"], color: B.orange,
+    featured: true,
   },
   {
-    flag: "🇺🇸", country: "Estados Unidos",
-    client: "Fintech Brasileira", sector: "Tecnologia",
-    title: "Expansão para o mercado norte-americano e captação de Série B",
-    result: "US$ 28M captados em Miami em 12 meses",
-    tags: ["EB-5", "Startup", "VC"], color: B.orange,
+    flag: "🌐", country: "EUA, Europa e China",
+    client: "SECON", sector: "Importação de eletrônicos",
+    title: "Redução tributária, busca de fornecedores e seleção de parceiros logísticos internacionais",
+    result: "Alíquota de importação reduzida de 16% para até 0%",
+    tags: ["Ex-Tarifário", "Fornecedores", "Logística"], color: "#4A90D9",
   },
   {
-    flag: "🇵🇹", country: "Portugal",
-    client: "Família Empresarial", sector: "Patrimônio",
-    title: "Golden Visa e planejamento patrimonial para família com 4 membros",
-    result: "Residência europeia obtida em 7 meses",
-    tags: ["Golden Visa", "Família", "Imóveis"], color: "#22c55e",
-  },
-  {
-    flag: "🇸🇬", country: "Singapura",
-    client: "Gestora de Fundos", sector: "Finanças",
-    title: "Estruturação de fundo offshore e compliance no sudeste asiático",
-    result: "US$ 85M sob gestão offshore estruturados",
-    tags: ["Offshore", "Fund", "MAS"], color: "#a855f7",
+    flag: "⚓", country: "Comércio Exterior",
+    client: "Sulmix Diluentes", sector: "Importação de óleo mineral",
+    title: "Estruturação regulatória, logística e tributária para uma operação de importação segura",
+    result: "Redução de custos de R$ 100 mil e alíquota zero de II e IPI identificada",
+    tags: ["ANP", "DUIMP", "Sourcing"], color: "#22c55e",
   },
 ];
+
+function CaseCard({ caseItem, index }) {
+  const { ref, visible } = useReveal();
+
+  return (
+    <div
+      ref={ref}
+      className={`case-card rounded-xl p-8 reveal ${visible ? "visible" : ""} ${caseItem.featured ? "md:col-span-2 lg:p-10" : ""}`}
+      style={{ transitionDelay: `${index * 90}ms` }}
+    >
+      <div className="flex items-start justify-between gap-4 mb-5">
+        <div className="flex items-center gap-3">
+          <span className="text-3xl">{caseItem.flag}</span>
+          <div>
+            <div className="font-semibold text-sm" style={{ color: B.offwhite }}>{caseItem.country}</div>
+            <div className="text-xs" style={{ color: B.silver }}>{caseItem.sector} · {caseItem.client}</div>
+          </div>
+        </div>
+        <span
+          className="text-xs px-2.5 py-1 rounded font-medium flex-shrink-0"
+          style={{ background: `${caseItem.color}18`, color: caseItem.color, border: `1px solid ${caseItem.color}35` }}
+        >
+          Concluído
+        </span>
+      </div>
+
+      <h3
+        className={`font-medium leading-snug mb-4 ${caseItem.featured ? "text-lg" : "text-base"}`}
+        style={{ color: B.offwhite }}
+      >
+        {caseItem.title}
+      </h3>
+
+      <div
+        className="flex items-center gap-2.5 py-3 px-4 rounded mb-5"
+        style={{ background: "rgba(252,163,17,0.07)", border: "1px solid rgba(252,163,17,0.15)" }}
+      >
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke={B.orange} strokeWidth="2.5">
+          <polyline points="20 6 9 17 4 12" />
+        </svg>
+        <span className="text-sm font-medium" style={{ color: B.orange }}>{caseItem.result}</span>
+      </div>
+
+      <div className="flex flex-wrap gap-1.5">
+        {caseItem.tags.map(tag => (
+          <span key={tag} className="text-xs px-2.5 py-1 rounded"
+            style={{ background: "rgba(221,229,242,0.05)", border: "1px solid rgba(221,229,242,0.1)", color: B.silver }}>
+            {tag}
+          </span>
+        ))}
+      </div>
+    </div>
+  );
+}
 
 function Cases() {
   const { ref, visible } = useReveal();
@@ -377,60 +426,15 @@ function Cases() {
               Cases de <span className="orange-text">Sucesso</span>
             </h2>
             <p className="text-sm max-w-xs" style={{ color: B.silver }}>
-              Histórias reais de clientes que transformaram sua visão em realidade global.
+              Projetos reais de exportação e importação conduzidos com análise, segurança e resultados mensuráveis.
             </p>
           </div>
         </div>
 
         <div className="grid md:grid-cols-2 gap-5">
-          {CASES.map((c, i) => {
-            const { ref: cr, visible: cv } = useReveal();
-            return (
-              <div
-                key={c.title}
-                ref={cr}
-                className={`case-card rounded-xl p-8 reveal ${cv ? "visible" : ""}`}
-                style={{ transitionDelay: `${i * 90}ms` }}
-              >
-                <div className="flex items-start justify-between mb-5">
-                  <div className="flex items-center gap-3">
-                    <span className="text-3xl">{c.flag}</span>
-                    <div>
-                      <div className="font-semibold text-sm" style={{ color: B.offwhite }}>{c.country}</div>
-                      <div className="text-xs" style={{ color: B.silver }}>{c.sector} · {c.client}</div>
-                    </div>
-                  </div>
-                  <span
-                    className="text-xs px-2.5 py-1 rounded font-medium"
-                    style={{ background: `${c.color}18`, color: c.color, border: `1px solid ${c.color}35` }}
-                  >
-                    Concluído
-                  </span>
-                </div>
-
-                <h3 className="font-medium text-base leading-snug mb-4" style={{ color: B.offwhite }}>{c.title}</h3>
-
-                <div
-                  className="flex items-center gap-2.5 py-3 px-4 rounded mb-5"
-                  style={{ background: "rgba(252,163,17,0.07)", border: "1px solid rgba(252,163,17,0.15)" }}
-                >
-                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke={B.orange} strokeWidth="2.5">
-                    <polyline points="20 6 9 17 4 12" />
-                  </svg>
-                  <span className="text-sm font-medium" style={{ color: B.orange }}>{c.result}</span>
-                </div>
-
-                <div className="flex flex-wrap gap-1.5">
-                  {c.tags.map(t => (
-                    <span key={t} className="text-xs px-2.5 py-1 rounded"
-                      style={{ background: "rgba(221,229,242,0.05)", border: "1px solid rgba(221,229,242,0.1)", color: B.silver }}>
-                      {t}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            );
-          })}
+          {CASES.map((caseItem, index) => (
+            <CaseCard key={caseItem.client} caseItem={caseItem} index={index} />
+          ))}
         </div>
 
         {/* Testimonial */}
@@ -446,16 +450,16 @@ function Cases() {
             className="text-lg leading-relaxed max-w-3xl italic mb-6"
             style={{ fontFamily: "'Playfair Display', serif", color: B.mist }}
           >
-            "A Atlântica não apenas nos ajudou a internacionalizar — nos guiou por cada decisão estratégica com profissionalismo impecável. Nossa holding europeia hoje representa 60% da receita do grupo."
+            "Foi possível identificar os países com maior potencial de compra e quais poderiam ser os principais clientes."
           </p>
           <div className="flex items-center gap-3">
             <div
               className="w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0"
               style={{ background: `linear-gradient(135deg, ${B.orange}, ${B.orangeLt})`, color: B.navy }}
-            >RM</div>
+            >LM</div>
             <div>
-              <div className="font-semibold text-sm" style={{ color: B.offwhite }}>Ricardo Mendes</div>
-              <div className="text-xs" style={{ color: B.silver }}>CEO · Grupo Industrial Paulista</div>
+              <div className="font-semibold text-sm" style={{ color: B.offwhite }}>Leonardo Moliterni</div>
+              <div className="text-xs" style={{ color: B.silver }}>Diretor de Comércio Exterior · Exatron</div>
             </div>
           </div>
         </div>
@@ -577,9 +581,9 @@ const DIRETORIAS = [
     acento: "#4A90D9",
     director: { name: "Dra. Isabela Fonseca", role: "Diretora Jurídica", initials: "IF", grad: ["#4A90D9", "#7CB9F0"] },
     staff: [
-      { name: "Lucas Tavares",    role: "Advogado Sênior",      initials: "LT", grad: ["#4A90D9", "#7CB9F0"] },
-      { name: "Camila Rezende",   role: "Especialista em M&A",  initials: "CR", grad: ["#4A90D9", "#7CB9F0"] },
-      { name: "Bruno Salles",     role: "Analista Jurídico",    initials: "BS", grad: ["#4A90D9", "#7CB9F0"] },
+      { name: "Lucas Tavares", role: "Advogado Sênior", initials: "LT", grad: ["#4A90D9", "#7CB9F0"] },
+      { name: "Camila Rezende", role: "Especialista em M&A", initials: "CR", grad: ["#4A90D9", "#7CB9F0"] },
+      { name: "Bruno Salles", role: "Analista Jurídico", initials: "BS", grad: ["#4A90D9", "#7CB9F0"] },
     ],
   },
   {
@@ -587,9 +591,9 @@ const DIRETORIAS = [
     acento: B.orange,
     director: { name: "Carlos Drummond Jr.", role: "Diretor de Investimentos", initials: "CD", grad: [B.orange, B.orangeLt] },
     staff: [
-      { name: "Fernanda Lopes",   role: "Analista de M&A",      initials: "FL", grad: [B.orange, B.orangeLt] },
-      { name: "Diego Pinheiro",   role: "Gestor de Portfólio",  initials: "DP", grad: [B.orange, B.orangeLt] },
-      { name: "Ana Beatriz Costa",role: "Especialista Offshore", initials: "AB", grad: [B.orange, B.orangeLt] },
+      { name: "Fernanda Lopes", role: "Analista de M&A", initials: "FL", grad: [B.orange, B.orangeLt] },
+      { name: "Diego Pinheiro", role: "Gestor de Portfólio", initials: "DP", grad: [B.orange, B.orangeLt] },
+      { name: "Ana Beatriz Costa", role: "Especialista Offshore", initials: "AB", grad: [B.orange, B.orangeLt] },
     ],
   },
   {
@@ -597,9 +601,9 @@ const DIRETORIAS = [
     acento: "#10b981",
     director: { name: "Sophia Nakamura", role: "Diretora de Operações", initials: "SN", grad: ["#10b981", "#34d399"] },
     staff: [
-      { name: "Marcelo Freitas",  role: "Consultor de Vistos",  initials: "MF", grad: ["#10b981", "#34d399"] },
-      { name: "Juliana Matos",    role: "Analista de Imigração", initials: "JM", grad: ["#10b981", "#34d399"] },
-      { name: "Pedro Augusto",    role: "Coord. de Processos",  initials: "PA", grad: ["#10b981", "#34d399"] },
+      { name: "Marcelo Freitas", role: "Consultor de Vistos", initials: "MF", grad: ["#10b981", "#34d399"] },
+      { name: "Juliana Matos", role: "Analista de Imigração", initials: "JM", grad: ["#10b981", "#34d399"] },
+      { name: "Pedro Augusto", role: "Coord. de Processos", initials: "PA", grad: ["#10b981", "#34d399"] },
     ],
   },
   {
@@ -607,9 +611,9 @@ const DIRETORIAS = [
     acento: "#a855f7",
     director: { name: "André Castellan", role: "Diretor de Compliance", initials: "AC", grad: ["#a855f7", "#d8b4fe"] },
     staff: [
-      { name: "Renata Borges",    role: "Analista de Compliance", initials: "RB", grad: ["#a855f7", "#d8b4fe"] },
-      { name: "Thiago Mendes",    role: "Especialista KYC/AML",   initials: "TM", grad: ["#a855f7", "#d8b4fe"] },
-      { name: "Larissa Viana",    role: "Gestora de Riscos",      initials: "LV", grad: ["#a855f7", "#d8b4fe"] },
+      { name: "Renata Borges", role: "Analista de Compliance", initials: "RB", grad: ["#a855f7", "#d8b4fe"] },
+      { name: "Thiago Mendes", role: "Especialista KYC/AML", initials: "TM", grad: ["#a855f7", "#d8b4fe"] },
+      { name: "Larissa Viana", role: "Gestora de Riscos", initials: "LV", grad: ["#a855f7", "#d8b4fe"] },
     ],
   },
 ];
@@ -682,7 +686,7 @@ function DiretoriaBlock({ d, index }) {
 
       {/* Staff */}
       <div className="px-4 pb-4 space-y-2">
-        {d.staff.map((s, si) => (
+        {d.staff.slice(0, 1).map((s, si) => (
           <PersonCard key={s.name} person={s} delay={index * 60 + (si + 1) * 50} acento={d.acento} />
         ))}
       </div>
@@ -713,8 +717,8 @@ function About() {
             </p>
             <div className="flex flex-wrap gap-8">
               {[
-                { label: "Escritórios",   value: "São Paulo · Lisboa · Miami" },
-                { label: "Parcerias",     value: "40+ países" },
+                { label: "Escritórios", value: "São Paulo · Lisboa · Miami" },
+                { label: "Parcerias", value: "40+ países" },
                 { label: "Certificações", value: "ISO 27001 · OAB" },
               ].map(item => (
                 <div key={item.label}>
@@ -729,9 +733,9 @@ function About() {
             <div className="grid grid-cols-2 gap-4">
               {[
                 { icon: "🔐", title: "Confidencialidade", desc: "Sigilo absoluto em todas as operações e informações dos clientes." },
-                { icon: "🎯", title: "Precisão",           desc: "Análises detalhadas e estratégias personalizadas para cada caso." },
-                { icon: "🌐", title: "Rede Global",        desc: "Parceiros locais especializados em mais de 40 jurisdições." },
-                { icon: "⚖️", title: "Ética",             desc: "Compliance rigoroso e conduta íntegra em todas as operações." },
+                { icon: "🎯", title: "Precisão", desc: "Análises detalhadas e estratégias personalizadas para cada caso." },
+                { icon: "🌐", title: "Rede Global", desc: "Parceiros locais especializados em mais de 40 jurisdições." },
+                { icon: "⚖️", title: "Ética", desc: "Compliance rigoroso e conduta íntegra em todas as operações." },
               ].map(v => (
                 <div key={v.title} className="p-5 rounded-xl"
                   style={{ background: "rgba(1,17,61,0.5)", border: "1px solid rgba(221,229,242,0.08)" }}>
@@ -752,14 +756,49 @@ function About() {
         <div className="brand-divider my-16" />
 
         {/* Diretorias */}
-        <div ref={teamRef} className={`text-center mb-12 reveal ${teamVis ? "visible" : ""}`}>
-          <div className="section-label mb-3">Estrutura organizacional</div>
-          <h3 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: "clamp(1.5rem,3vw,2.2rem)", color: B.offwhite }}>
-            Nossas Diretorias
-          </h3>
-          <p className="text-sm mt-3 max-w-lg mx-auto" style={{ color: B.silver }}>
-            Equipes especializadas organizadas por área de atuação, cada uma liderada por um diretor de referência no mercado.
-          </p>
+        <div
+          ref={teamRef}
+          className={`grid lg:grid-cols-[1.35fr_0.65fr] items-stretch gap-8 mb-12 reveal ${teamVis ? "visible" : ""}`}
+        >
+          <figure
+            className="relative min-h-[380px] lg:min-h-[430px] rounded-2xl overflow-hidden"
+            style={{ border: "1px solid rgba(252,163,17,0.2)", boxShadow: "0 18px 50px rgba(0,0,0,0.2)" }}
+          >
+            <img
+              src={equipeDiretoria}
+              alt="Equipe de diretoria da Atlântica Consultoria Internacional"
+              className="absolute inset-0 w-full h-full object-cover imagem-diretoria"
+            />
+            <div
+              className="absolute inset-0"
+              style={{ background: "linear-gradient(180deg, transparent 45%, rgba(1,17,61,0.92) 100%)" }}
+            />
+            <figcaption className="absolute left-6 right-6 bottom-5 flex items-end justify-between gap-4">
+              <div>
+                <div className="text-[10px] uppercase tracking-[0.2em] mb-1" style={{ color: B.orange }}>
+                  Liderança Atlântica
+                </div>
+                <div className="text-sm font-medium" style={{ color: B.offwhite }}>
+                  Estratégia construída por pessoas
+                </div>
+              </div>
+              <span className="hidden sm:block text-xs" style={{ color: B.silver }}>Nossa diretoria</span>
+            </figcaption>
+          </figure>
+
+          <div
+            className="flex flex-col justify-center rounded-2xl p-7 lg:p-8"
+            style={{ background: "rgba(1,17,61,0.45)", border: "1px solid rgba(221,229,242,0.08)" }}
+          >
+            <div className="section-label mb-3">Estrutura organizacional</div>
+            <h3 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: "clamp(1.5rem,3vw,2.2rem)", color: B.offwhite }}>
+              Nossas Diretorias
+            </h3>
+            <div className="w-10 h-px my-5" style={{ background: `linear-gradient(90deg, ${B.orange}, transparent)` }} />
+            <p className="text-sm leading-relaxed" style={{ color: B.silver }}>
+              Equipes especializadas organizadas por área de atuação, cada uma liderada por uma diretoria comprometida com os resultados dos clientes.
+            </p>
+          </div>
         </div>
 
         <div className="grid sm:grid-cols-2 xl:grid-cols-4 gap-5">
@@ -802,10 +841,10 @@ function Contact() {
 
             <div className="space-y-5">
               {[
-                { icon: "📍", label: "Endereço",  val: "Av. Brigadeiro Faria Lima, 3144 — São Paulo, SP" },
-                { icon: "📞", label: "Telefone",  val: "+55 (11) 3000-0000" },
-                { icon: "✉️", label: "E-mail",    val: "contato@atlantica.com.br" },
-                { icon: "🕐", label: "Horário",   val: "Seg – Sex · 8h às 19h (Horário de Brasília)" },
+                { icon: "📍", label: "Endereço", val: "Av. Brigadeiro Faria Lima, 3144 — São Paulo, SP" },
+                { icon: "📞", label: "Telefone", val: "+55 (11) 3000-0000" },
+                { icon: "✉️", label: "E-mail", val: "contato@atlantica.com.br" },
+                { icon: "🕐", label: "Horário", val: "Seg – Sex · 8h às 19h (Horário de Brasília)" },
               ].map(item => (
                 <div key={item.label} className="flex items-start gap-3">
                   <span className="text-lg mt-0.5 flex-shrink-0">{item.icon}</span>
