@@ -1,4 +1,7 @@
 import { useState, useEffect, useRef } from "react";
+import logoBranco from "./image/Logo Branco com Frase.png";
+import magaOficial from "./image/magá SEM FUNDO(3).png";
+import mapaMundi from "./image/mapa mundi com navio.png";
 
 /* ── Brand tokens ── */
 const B = {
@@ -76,24 +79,12 @@ function Nav() {
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-12 h-[70px] flex items-center justify-between">
         {/* Logo */}
-        <a href="#hero" className="flex items-center gap-3 group">
-          {/* Emblem */}
-          <div className="relative w-9 h-9 flex-shrink-0">
-            <svg viewBox="0 0 40 40" fill="none" className="w-full h-full">
-              <polygon points="20,2 38,11 38,29 20,38 2,29 2,11" fill={B.navy2} stroke={B.orange} strokeWidth="1.5" />
-              <polygon points="20,8 33,14.5 33,25.5 20,32 7,25.5 7,14.5" fill="none" stroke={B.orange} strokeWidth="0.8" opacity="0.5" />
-              <path d="M11 22 Q15 16 20 20 Q25 24 29 18" stroke={B.orange} strokeWidth="1.8" fill="none" strokeLinecap="round" />
-              <circle cx="20" cy="20" r="2.5" fill={B.orange} />
-            </svg>
-          </div>
-          <div className="flex flex-col leading-none">
-            <span style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: "1.05rem", color: B.offwhite, letterSpacing: "0.02em" }}>
-              Atlântica
-            </span>
-            <span style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 400, fontSize: "0.6rem", color: B.silver, letterSpacing: "0.18em", textTransform: "uppercase" }}>
-              Consultoria Internacional
-            </span>
-          </div>
+        <a href="#hero" className="flex items-center group" aria-label="Atlântica Consultoria Internacional — início">
+          <img
+            src={logoBranco}
+            alt="Atlântica Consultoria Internacional"
+            className="w-40 h-14 object-contain object-left"
+          />
         </a>
 
         {/* Desktop links */}
@@ -156,43 +147,14 @@ function Hero() {
       <div className="absolute bottom-0 left-1/4 w-72 h-72 rounded-full pointer-events-none opacity-8"
         style={{ background: `radial-gradient(circle, ${B.navy2}, transparent 70%)`, filter: "blur(60px)" }} />
 
-      {/* Decorative globe — right side */}
+      {/* Official world map — right side */}
       <div className="absolute right-8 xl:right-20 top-1/2 -translate-y-1/2 hidden lg:block pointer-events-none select-none">
-        <div className="relative w-72 xl:w-96 h-72 xl:h-96 float-slow opacity-30">
-          <svg viewBox="0 0 380 380" fill="none" className="w-full h-full">
-            <circle cx="190" cy="190" r="175" stroke={B.orange} strokeWidth="0.8" />
-            <circle cx="190" cy="190" r="125" stroke={B.orange} strokeWidth="0.5" />
-            <circle cx="190" cy="190" r="75"  stroke={B.orange} strokeWidth="0.5" />
-            <ellipse cx="190" cy="190" rx="175" ry="70"  stroke={B.orange} strokeWidth="0.5" />
-            <ellipse cx="190" cy="190" rx="175" ry="120" stroke={B.orange} strokeWidth="0.4" />
-            <line x1="15"  y1="190" x2="365" y2="190" stroke={B.orange} strokeWidth="0.4" />
-            <line x1="190" y1="15"  x2="190" y2="365" stroke={B.orange} strokeWidth="0.4" />
-            {/* Continent blobs */}
-            <path d="M90,145 Q115,130 145,138 Q158,152 145,168 Q115,172 90,158 Z" fill={B.orange} opacity="0.35" />
-            <path d="M160,118 Q190,105 222,112 Q240,126 234,150 Q220,168 196,172 Q164,166 158,148 Q152,132 160,118 Z" fill={B.orange} opacity="0.32" />
-            <path d="M244,155 Q268,148 285,162 Q290,178 278,190 Q260,198 244,186 Q234,175 244,155 Z" fill={B.orange} opacity="0.28" />
-            <path d="M118,188 Q140,182 154,198 Q150,216 134,220 Q114,214 112,200 Z" fill={B.orange} opacity="0.24" />
-            <path d="M184,204 Q202,196 215,210 Q212,230 196,234 Q178,228 178,215 Z" fill={B.orange} opacity="0.24" />
-            {/* Hotspot dots */}
-            <circle cx="116" cy="152" r="4" fill={B.orange} opacity="0.9" />
-            <circle cx="200" cy="134" r="4" fill={B.orange} opacity="0.9" />
-            <circle cx="262" cy="170" r="4" fill={B.orange} opacity="0.9" />
-            <circle cx="136" cy="205" r="4" fill={B.orange} opacity="0.9" />
-            <circle cx="198" cy="218" r="4" fill={B.orange} opacity="0.9" />
-            <circle cx="190" cy="190" r="5" fill={B.orange} opacity="1"   />
-            {/* Connection lines */}
-            <line x1="116" y1="152" x2="200" y2="134" stroke={B.orange} strokeWidth="0.8" opacity="0.5" strokeDasharray="5 4" />
-            <line x1="200" y1="134" x2="262" y2="170" stroke={B.orange} strokeWidth="0.8" opacity="0.5" strokeDasharray="5 4" />
-            <line x1="136" y1="205" x2="198" y2="218" stroke={B.orange} strokeWidth="0.8" opacity="0.5" strokeDasharray="5 4" />
-            <line x1="190" y1="190" x2="116" y2="152" stroke={B.orange} strokeWidth="0.5" opacity="0.3" strokeDasharray="3 3" />
-            <line x1="190" y1="190" x2="262" y2="170" stroke={B.orange} strokeWidth="0.5" opacity="0.3" strokeDasharray="3 3" />
-          </svg>
-          {/* Pulse rings */}
-          {[0, 1].map(i => (
-            <div key={i} className="absolute inset-0 rounded-full"
-              style={{ border: `1px solid rgba(252,163,17,0.18)`, animation: `pulse-ring 3.5s ease-out ${i * 1.75}s infinite` }} />
-          ))}
-        </div>
+        <img
+          src={mapaMundi}
+          alt="Mapa-múndi com navio, símbolo da atuação internacional da Atlântica"
+          className="w-[380px] xl:w-[500px] h-auto float-slow opacity-25"
+          style={{ filter: "drop-shadow(0 16px 40px rgba(252,163,17,0.12))" }}
+        />
       </div>
 
       {/* Content */}
@@ -285,40 +247,28 @@ function Hero() {
 ══════════════════════════════ */
 const SERVICES = [
   {
-    icon: <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10A15.3 15.3 0 0 1 12 2z"/></svg>,
-    title: "Expansão Internacional",
-    desc: "Planejamento estratégico para entrada em novos mercados, análise regulatória e estabelecimento de operações locais em mais de 40 países.",
-    tags: ["Europa", "EUA", "Ásia", "LatAm"],
+    icon: <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10A15.3 15.3 0 0 1 12 2z"/><path d="m15 8 3-3m0 0h-3m3 0v3"/></svg>,
+    title: "Exportação",
+    desc: "Preparamos empresas para acessar mercados internacionais com estratégia e segurança. Analisamos oportunidades e conectamos produtos a potenciais compradores no exterior.",
+    items: ["Análise de viabilidade", "Estudo de mercado", "Prospecção internacional de compradores"],
   },
   {
-    icon: <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>,
-    title: "Investimentos & M&A",
-    desc: "Assessoria completa em fusões, aquisições e investimentos cross-border: due diligence, valuations e estruturação de transações.",
-    tags: ["M&A", "Private Equity", "Valuation"],
+    icon: <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M4 5h7M7.5 3v2c0 4-2 7-5 9"/><path d="M5 10c1.5 2 3 3.5 5 4.5"/><path d="m13 21 4-10 4 10M14.5 17h5"/></svg>,
+    title: "Tradução",
+    desc: "Facilitamos a comunicação entre empresas de diferentes países com traduções claras e profissionais. Oferecemos suporte linguístico para documentos e encontros comerciais.",
+    items: ["Serviços de tradução", "Tradução de documentos", "Reuniões de negócios"],
   },
   {
     icon: <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>,
-    title: "Estruturação Societária",
-    desc: "Holdings internacionais, planejamento tributário cross-border e estruturas jurídicas otimizadas para operações e patrimônio global.",
-    tags: ["Holding", "Tax Planning", "Offshore"],
+    title: "Importação",
+    desc: "Orientamos operações de importação desde o planejamento até a escolha de fornecedores. Buscamos oportunidades fiscais e reduzimos riscos durante todo o processo.",
+    items: ["Busca por benefícios fiscais", "Consultoria em importação", "Prospecção internacional de fornecedores"],
   },
   {
-    icon: <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>,
-    title: "Vistos & Residência",
-    desc: "Golden Visa, residência por investimento e cidadania internacional. Acompanhamento completo para você e toda a família.",
-    tags: ["Golden Visa", "EB-5", "Cidadania"],
-  },
-  {
-    icon: <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>,
-    title: "Consultoria Digital Global",
-    desc: "Internacionalização de negócios digitais: e-commerce global, marketplaces internacionais, regulamentação de dados e pagamentos.",
-    tags: ["E-commerce", "SaaS", "FinTech"],
-  },
-  {
-    icon: <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>,
-    title: "Compliance Internacional",
-    desc: "Adequação às normas GDPR, FCPA, LGPD e regulamentações locais. Gestão de riscos regulatórios e governança corporativa global.",
-    tags: ["GDPR", "FCPA", "KYC/AML"],
+    icon: <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M16 11c1.5 0 3-1.5 3-3s-1.5-3-3-3-3 1.5-3 3"/><path d="M8 11c-1.5 0-3-1.5-3-3s1.5-3 3-3 3 1.5 3 3"/><path d="m8 12 4 4 4-4"/><path d="M3 21v-2a5 5 0 0 1 5-5M21 21v-2a5 5 0 0 0-5-5"/></svg>,
+    title: "Paradiplomacia",
+    desc: "Aproximamos governos locais, instituições e organizações de oportunidades no exterior. Desenvolvemos conexões estratégicas para atrair investimentos e estabelecer parcerias internacionais.",
+    items: ["Serviços paradiplomáticos", "Atração de investimentos estrangeiros", "Parcerias internacionais"],
   },
 ];
 
@@ -338,11 +288,11 @@ function Services() {
             Nossos <span className="orange-text">Serviços</span>
           </h2>
           <p className="mt-4 max-w-lg mx-auto text-sm leading-relaxed" style={{ color: B.silver }}>
-            Soluções integradas para clientes que buscam crescimento e proteção patrimonial além das fronteiras brasileiras.
+            Soluções para empresas e instituições que desejam importar, exportar e construir relações internacionais.
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="grid md:grid-cols-2 gap-5">
           {SERVICES.map((s, i) => {
             const { ref: cr, visible: cv } = useReveal();
             return (
@@ -360,9 +310,14 @@ function Services() {
                 </div>
                 <h3 className="font-semibold text-base mb-3" style={{ color: B.offwhite }}>{s.title}</h3>
                 <p className="text-sm leading-relaxed mb-5" style={{ color: B.silver }}>{s.desc}</p>
-                <div className="flex flex-wrap gap-1.5">
-                  {s.tags.map(t => <span key={t} className="tag-chip">{t}</span>)}
-                </div>
+                <ul className="space-y-2">
+                  {s.items.map(item => (
+                    <li key={item} className="flex items-start gap-2 text-xs leading-relaxed" style={{ color: B.mist }}>
+                      <span className="mt-1.5 w-1.5 h-1.5 rounded-full flex-shrink-0" style={{ background: B.orange }} />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
               </div>
             );
           })}
@@ -554,17 +509,15 @@ function CeoCard() {
             <div className="absolute -bottom-2 -right-4 w-20 h-20 rounded-full pointer-events-none"
               style={{ border: `1px solid rgba(252,163,17,0.08)` }} />
 
-            {/* ↓ Coloque aqui a imagem/ilustração do mascote */}
             <div
-              className="relative z-10 w-36 h-36 sm:w-44 sm:h-44 flex items-center justify-center mt-6 mb-4 sm:my-auto"
+              className="relative z-10 w-40 h-48 sm:w-48 sm:h-56 flex items-center justify-center mt-6 mb-4 sm:my-auto"
               style={{ filter: "drop-shadow(0 8px 24px rgba(252,163,17,0.25))" }}
             >
-              {/* Placeholder SVG mascote — substitua por <img src="mascote.png" /> */}
-                  <img
-                    src="mascote.png"
-                    alt="Mascote CEO"
-                    className="w-full h-full object-contain"
-                    />
+              <img
+                src={magaOficial}
+                alt="Magá, mascote oficial da Atlântica Consultoria Internacional"
+                className="w-full h-full object-contain"
+              />
             </div>
 
             {/* Label sob o mascote */}
@@ -924,11 +877,10 @@ function Contact() {
                     <label className="text-xs mb-1.5 block" style={{ color: B.silver }}>Assunto *</label>
                     <select required className="form-input w-full px-4 py-3 rounded text-sm" value={form.assunto} onChange={set("assunto")}>
                       <option value="" disabled>Selecione...</option>
-                      <option>Expansão Internacional</option>
-                      <option>Investimentos & M&A</option>
-                      <option>Estruturação Societária</option>
-                      <option>Vistos & Residência</option>
-                      <option>Compliance Internacional</option>
+                      <option>Exportação</option>
+                      <option>Tradução</option>
+                      <option>Importação</option>
+                      <option>Paradiplomacia</option>
                       <option>Outro assunto</option>
                     </select>
                   </div>
@@ -978,21 +930,12 @@ function Footer() {
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="grid sm:grid-cols-3 items-center gap-6">
           {/* Brand */}
-          <div className="flex items-center gap-2.5">
-            <div className="w-7 h-7 flex-shrink-0">
-              <svg viewBox="0 0 40 40" fill="none" className="w-full h-full">
-                <polygon points="20,2 38,11 38,29 20,38 2,29 2,11" fill={B.navy2} stroke={B.orange} strokeWidth="1.5" />
-                <circle cx="20" cy="20" r="3" fill={B.orange} />
-              </svg>
-            </div>
-            <div>
-              <div style={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: "0.9rem", color: B.offwhite }}>
-                Atlântica
-              </div>
-              <div style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "0.55rem", color: B.silver, letterSpacing: "0.16em", textTransform: "uppercase" }}>
-                Consultoria Internacional
-              </div>
-            </div>
+          <div className="flex items-center">
+            <img
+              src={logoBranco}
+              alt="Atlântica Consultoria Internacional"
+              className="w-36 h-auto object-contain object-left"
+            />
           </div>
 
           {/* Links */}
