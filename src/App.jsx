@@ -184,7 +184,7 @@ function Hero() {
             className="text-base leading-relaxed mb-10 max-w-lg"
             style={{ color: B.silver, animation: "fade-up 0.6s 0.2s ease both" }}
           >
-            Há mais de 15 anos, a Atlântica conecta empresas e famílias brasileiras ao mercado global com estratégia, segurança jurídica e uma rede exclusiva de parceiros em mais de 40 países.
+            Há 11 anos, a Atlântica conecta empresas e famílias brasileiras ao mercado global com estratégia, segurança jurídica e uma rede exclusiva de parceiros em mais de 40 países.
           </p>
 
           <div className="flex flex-wrap gap-4" style={{ animation: "fade-up 0.6s 0.3s ease both" }}>
@@ -205,7 +205,7 @@ function Hero() {
             style={{ borderTop: "1px solid rgba(221,229,242,0.1)", animation: "fade-up 0.6s 0.45s ease both" }}
           >
             {[
-              { val: 15, suf: "+", label: "Anos de experiência" },
+              { val: 11, suf: "", label: "Anos de existência" },
               { val: 40, suf: "+", label: "Países atendidos" },
               { val: 320, suf: "+", label: "Clientes atendidos" },
               { val: 98, suf: "%", label: "Taxa de satisfação" },
@@ -369,8 +369,8 @@ function CaseCard({ caseItem, index }) {
         <div className="flex items-center gap-3">
           <span className="text-3xl">{caseItem.flag}</span>
           <div>
-            <div className="font-semibold text-sm" style={{ color: B.offwhite }}>{caseItem.country}</div>
-            <div className="text-xs" style={{ color: B.silver }}>{caseItem.sector} · {caseItem.client}</div>
+            <div className="text-xs mb-1" style={{ color: B.silver }}>{caseItem.country} · {caseItem.sector}</div>
+            <div className="text-base font-bold tracking-wide" style={{ color: caseItem.color }}>{caseItem.client}</div>
           </div>
         </div>
         <span
@@ -577,43 +577,43 @@ function CeoCard() {
 
 const DIRETORIAS = [
   {
-    name: "Jurídico Internacional",
+    name: "Administrativo-Financeiro",
     acento: "#4A90D9",
-    director: { name: "Dra. Isabela Fonseca", role: "Diretora Jurídica", initials: "IF", grad: ["#4A90D9", "#7CB9F0"] },
+    director: { name: "Dra. Isabela Fonseca", role: "Diretora Administrativo-Financeira", initials: "IF", grad: ["#4A90D9", "#7CB9F0"] },
     staff: [
-      { name: "Lucas Tavares", role: "Advogado Sênior", initials: "LT", grad: ["#4A90D9", "#7CB9F0"] },
-      { name: "Camila Rezende", role: "Especialista em M&A", initials: "CR", grad: ["#4A90D9", "#7CB9F0"] },
-      { name: "Bruno Salles", role: "Analista Jurídico", initials: "BS", grad: ["#4A90D9", "#7CB9F0"] },
+      { name: "Lucas Tavares", role: "Analista Administrativo-Financeiro", initials: "LT", grad: ["#4A90D9", "#7CB9F0"] },
     ],
   },
   {
-    name: "Investimentos & M&A",
+    name: "Marketing",
     acento: B.orange,
-    director: { name: "Carlos Drummond Jr.", role: "Diretor de Investimentos", initials: "CD", grad: [B.orange, B.orangeLt] },
+    director: { name: "Carlos Drummond Jr.", role: "Diretor de Marketing", initials: "CD", grad: [B.orange, B.orangeLt] },
     staff: [
-      { name: "Fernanda Lopes", role: "Analista de M&A", initials: "FL", grad: [B.orange, B.orangeLt] },
-      { name: "Diego Pinheiro", role: "Gestor de Portfólio", initials: "DP", grad: [B.orange, B.orangeLt] },
-      { name: "Ana Beatriz Costa", role: "Especialista Offshore", initials: "AB", grad: [B.orange, B.orangeLt] },
+      { name: "Fernanda Lopes", role: "Analista de Marketing", initials: "FL", grad: [B.orange, B.orangeLt] },
     ],
   },
   {
-    name: "Operações & Vistos",
+    name: "Projetos",
     acento: "#10b981",
-    director: { name: "Sophia Nakamura", role: "Diretora de Operações", initials: "SN", grad: ["#10b981", "#34d399"] },
+    director: { name: "Sophia Nakamura", role: "Diretora de Projetos", initials: "SN", grad: ["#10b981", "#34d399"] },
     staff: [
-      { name: "Marcelo Freitas", role: "Consultor de Vistos", initials: "MF", grad: ["#10b981", "#34d399"] },
-      { name: "Juliana Matos", role: "Analista de Imigração", initials: "JM", grad: ["#10b981", "#34d399"] },
-      { name: "Pedro Augusto", role: "Coord. de Processos", initials: "PA", grad: ["#10b981", "#34d399"] },
+      { name: "Marcelo Freitas", role: "Analista de Projetos", initials: "MF", grad: ["#10b981", "#34d399"] },
     ],
   },
   {
-    name: "Compliance & Riscos",
+    name: "Gestão",
     acento: "#a855f7",
-    director: { name: "André Castellan", role: "Diretor de Compliance", initials: "AC", grad: ["#a855f7", "#d8b4fe"] },
+    director: { name: "André Castellan", role: "Diretor de Gestão", initials: "AC", grad: ["#a855f7", "#d8b4fe"] },
     staff: [
-      { name: "Renata Borges", role: "Analista de Compliance", initials: "RB", grad: ["#a855f7", "#d8b4fe"] },
-      { name: "Thiago Mendes", role: "Especialista KYC/AML", initials: "TM", grad: ["#a855f7", "#d8b4fe"] },
-      { name: "Larissa Viana", role: "Gestora de Riscos", initials: "LV", grad: ["#a855f7", "#d8b4fe"] },
+      { name: "Renata Borges", role: "Analista de Gestão", initials: "RB", grad: ["#a855f7", "#d8b4fe"] },
+    ],
+  },
+  {
+    name: "Comercial",
+    acento: "#22c5d6",
+    director: { name: "Camila Rezende", role: "Diretora Comercial", initials: "CR", grad: ["#22c5d6", "#67e8f9"] },
+    staff: [
+      { name: "Diego Pinheiro", role: "Consultor Comercial", initials: "DP", grad: ["#22c5d6", "#67e8f9"] },
     ],
   },
 ];
@@ -801,7 +801,7 @@ function About() {
           </div>
         </div>
 
-        <div className="grid sm:grid-cols-2 xl:grid-cols-4 gap-5">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5">
           {DIRETORIAS.map((d, i) => <DiretoriaBlock key={d.name} d={d} index={i} />)}
         </div>
       </div>

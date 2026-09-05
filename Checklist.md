@@ -4,16 +4,19 @@ Marque as decisões confirmadas durante a conversa com o cliente.
 
 ## 1. Marca e apresentação
 
-- [x] Nome oficial: **Atlântica Consultoria Internacional**.
-- [x] Logotipos e mascote oficial recebidos.
-- [ ] Manter a frase **“Sua empresa, sem fronteiras”**?
+- [X] Nome oficial: **Atlântica Consultoria Internacional**.
+- [X] Logotipos e mascote oficial recebidos.
+- [X] Manter a frase **“Sua empresa, sem fronteiras”**?
 - [ ] Qual descrição curta melhor apresenta a empresa?
-- [ ] As cores e o estilo visual atuais estão aprovados?
+    Vai ser alterado
+- [X] As cores e o estilo visual atuais estão aprovados?
 
 ## 2. Números e ação principal
 
 - [ ] Confirmar: ano de fundação, países e clientes atendidos e taxa de satisfação.
-- [ ] Qual deve ser o botão principal: formulário, WhatsApp ou agendamento?
+    Vai ser visto com o ADM FIN
+- [X] Qual deve ser o botão principal: formulário, WhatsApp ou agendamento?
+    Ir direto para o email comercial
 
 ## 3. Serviços
 
@@ -25,9 +28,9 @@ Marque as decisões confirmadas durante a conversa com o cliente.
 
 ## 4. Cases e depoimentos
 
-- [ ] A seção de cases deve permanecer?
-- [ ] Quais cases podem ser divulgados e com quais resultados?
-- [ ] Existe depoimento autorizado com nome, cargo e empresa?
+- [X] A seção de cases deve permanecer?
+- [X] Quais cases podem ser divulgados e com quais resultados?
+- [X] Existe depoimento autorizado com nome, cargo e empresa?
 
 ## 5. Empresa e diferenciais
 
