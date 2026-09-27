@@ -4,9 +4,9 @@ Marque as decisões confirmadas durante a conversa com o cliente.
 
 ## 1. Marca e apresentação
 
-- [x] Nome oficial: *Atlântica Consultoria Internacional*.
+- [x] Nome oficial: **Atlântica Consultoria Internacional**.
 - [x] Logotipos e mascote oficial recebidos.
-- [ ] Manter a frase *“Sua empresa, sem fronteiras”*? talvez pode ser
+- [ ] Manter a frase **“Sua empresa, sem fronteiras”**? talvez pode ser
 - [ ] Qual descrição curta melhor apresenta a empresa? mandar depois
 - [x] As cores e o estilo visual atuais estão aprovados?
 
@@ -50,7 +50,7 @@ Marque as decisões confirmadas durante a conversa com o cliente.
 ## 7. Contato
 
 - [ ] Confirmar endereço, telefone/WhatsApp, e-mail e horário. Colocar o email comercial deles e tel. da Yasmin
-- [x] Confirmar o prazo de resposta de *até 24 horas úteis*. 
+- [x] Confirmar o prazo de resposta de **até 24 horas úteis**. 
 - [x] Para onde o formulário deve enviar as mensagens? Cair no email do comercial deles
       Tirar parte de escritório e horario: seg a sexta das 8h às 18h
 
